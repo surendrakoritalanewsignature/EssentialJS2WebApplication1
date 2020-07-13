@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3>FileManager Demo</h3>
+<head>
+    <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class=" control-section" id="filemanager">
+        <div class="sample-container">
+            <!--  Initialize file manager component with Azure service-->
+            <!--Replace the hosted port number in the place of "{port}"-->
+            <ejs-filemanager id="filemanager" height="500px">
+                <e-filemanager-ajaxsettings url="http://localhost:62869/api/AzureProvider/AzureFileOperations"
+                                            uploadUrl="http://localhost:62869/api/AzureProvider/AzureUpload"
+                                            downloadUrl="http://localhost:62869/api/AzureProvider/AzureDownload"
+                                            getImageUrl="http://localhost:62869/api/AzureProvider/AzureGetImage">
+                </e-filemanager-ajaxsettings>
+            </ejs-filemanager>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        font-family: 'Segoe UI';
+        font-size: 1rem;
+        color: white;
+        text-align: left;
+        background-color: slategray;
+    }
+    .e-control{
+        background-color: lightgray;
+    }
+    .e-toolbar .e-toolbar-items.e-tbar-pos {
+        background: darkgray;
+    }
+    #filemanager_tb_newfolder,
+    #filemanager_tb_upload,
+    #filemanager_tb_cut,
+    #filemanager_tb_copy,
+    #filemanager_tb_paste,
+    #filemanager_tb_delete,
+    #filemanager_tb_rename,
+    #filemanager_tb_sortby,
+    #filemanager_tb_refresh,
+    #filemanager_tb_download,
+    #filemanager_tb_selection,
+    #filemanager_tb_view,
+    #filemanager_tb_details {
+        background: beige;
+    }
+
+</style>
+
+
+
