@@ -11,4 +11,23 @@
 <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="18.2.0.44" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<CopyAllFilesToSingleFolderForPackageDependsOn>
+			CustomCollectFiles;
+			$(CopyAllFilesToSingleFolderForPackageDependsOn);
+		</CopyAllFilesToSingleFolderForPackageDependsOn>
+		<CopyAllFilesToSingleFolderForMsdeployDependsOn>
+			CustomCollectFiles;
+			$(CopyAllFilesToSingleFolderForPackageDependsOn);
+		</CopyAllFilesToSingleFolderForMsdeployDependsOn>
+	</PropertyGroup>
+	<Target Name="CustomCollectFiles">
+		<ItemGroup>
+			<_CustomFiles Include="public\form\dist\*.js" />
+			<FilesForPackagingFromProject Include="%(_CustomFiles.Identity)">
+				<DestinationRelativePath>public\form\dist\%(Filename)%(Extension)</DestinationRelativePath>
+			</FilesForPackagingFromProject>
+		</ItemGroup>
+	</Target>
+
 </Project>
