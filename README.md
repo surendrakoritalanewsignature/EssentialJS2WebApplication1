@@ -15,9 +15,6 @@ Configure Essential JS 2 in the application
 4. Add the client-side resources through CDN or local npm package in the <head> element of the ~/Views/Shared/_Layout.cshtml layout page.
 
    <head>
-       ....
-       ....
-
        <!-- Syncfusion Essential JS 2 Styles -->
        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
 
@@ -27,8 +24,6 @@ Configure Essential JS 2 in the application
 5. Add the Essential JS 2 Script Manager at the end of <body> element in the ~/Views/Shared/_Layout.cshtml layout page.
 
    <body>
-       ....
-       ....
        <!-- Syncfusion Essential JS 2 ScriptManager -->
        <ejs-scripts></ejs-scripts>
    </body>
