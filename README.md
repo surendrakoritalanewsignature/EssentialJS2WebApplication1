@@ -13,8 +13,10 @@ Configure Essential JS 2 in the application
 
    @addTagHelper *, Syncfusion.EJ2
 4. Add the client-side resources through CDN or local npm package in the <head> element of the ~/Views/Shared/_Layout.cshtml layout page.
+   
+```html
    <head>
-      <div markdown="1">
+      <div>
        <!-- Syncfusion Essential JS 2 Styles -->
        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
 
@@ -22,17 +24,25 @@ Configure Essential JS 2 in the application
        <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
       </div>
    </head>
+```
+
 5. Add the Essential JS 2 Script Manager at the end of <body> element in the ~/Views/Shared/_Layout.cshtml layout page.
+```html
    <body>
-      <div markdown="1">
+      <div>
        <!-- Syncfusion Essential JS 2 ScriptManager -->
        <ejs-scripts></ejs-scripts>
       </div>
    </body>
+```
 
 6. Now, add the Syncfusion Essential JS 2 components in any web page (cshtml) in the Views folder.
    For example, the calendar component is added in the ~/Views/Home/Index.cshtml page.
-   <div markdown="1">
+   
+```html
+   <div>
        <ejs-calendar id="calendar"></ejs-calendar>
    </div>
+```
+
    Run the application. The Essential JS 2 calendar component will render in the web browser.
